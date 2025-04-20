@@ -1,0 +1,6 @@
+@SpotifyTrackView_HostAddress = http://localhost:5045
+
+GET {{SpotifyTrackView_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

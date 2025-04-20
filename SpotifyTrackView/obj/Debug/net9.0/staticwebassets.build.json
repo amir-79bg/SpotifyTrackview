@@ -1,0 +1,12 @@
+{
+  "Version": 1,
+  "Hash": "ST7V0Zhr1zmcNc7OW29gviDMl3ldl+SxCEr4e1TdeWc=",
+  "Source": "SpotifyTrackView",
+  "BasePath": "_content/SpotifyTrackView",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [],
+  "Assets": [],
+  "Endpoints": []
+}
