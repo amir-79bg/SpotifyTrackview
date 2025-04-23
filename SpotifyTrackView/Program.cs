@@ -62,8 +62,8 @@ builder.Services.AddAuthentication()
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = adminSettings["Issuer"],
-            ValidAudience = adminSettings["Audience"],
+            ValidIssuer = influencerSettings["Issuer"],
+            ValidAudience = influencerSettings["Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(influencerSettings["SecretKey"] ??
                                                                                throw new InvalidOperationException(
                                                                                    "Influencer settings not-found.")))
@@ -76,8 +76,8 @@ builder.Services.AddAuthentication()
             ValidateAudience = true,
             ValidateLifetime = true,
             ValidateIssuerSigningKey = true,
-            ValidIssuer = adminSettings["Issuer"],
-            ValidAudience = adminSettings["Audience"],
+            ValidIssuer = listenerSettings["Issuer"],
+            ValidAudience = listenerSettings["Audience"],
             IssuerSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(listenerSettings["SecretKey"] ??
                                                                                throw new InvalidOperationException(
                                                                                    "Listener settings not-found.")))

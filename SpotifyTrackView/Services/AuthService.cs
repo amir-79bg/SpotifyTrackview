@@ -37,24 +37,32 @@ public class AuthService<TUser> : IAuthService<TUser> where TUser : class
 
     public string GenerateJwtToken(TUser user, List<Claim> claims)
     {
-        var tokenHandler = new JwtSecurityTokenHandler();
+        var userType = typeof(TUser).Name; // e.g., "Admin", "Artist", etc.
+        var section = _configuration.GetSection($"JwtSettings:{userType}");
 
-        // Create a symmetric security key using the secret key from the configuration.
-        var authSigningKey = new SymmetricSecurityKey
-            (Encoding.UTF8.GetBytes(_configuration["JwtSettings:Admin:SecretKey"]));
-        
+        if (!section.Exists())
+            throw new InvalidOperationException($"JwtSettings for {userType} not found.");
+
+        var issuer = section["Issuer"];
+        var audience = section["Audience"];
+        var secretKey = section["SecretKey"];
+
+        if (string.IsNullOrWhiteSpace(secretKey))
+            throw new InvalidOperationException($"SecretKey is missing for JwtSettings:{userType}");
+
+        var authSigningKey = new SymmetricSecurityKey(Encoding.UTF8.GetBytes(secretKey));
+
         var tokenDescriptor = new SecurityTokenDescriptor
         {
-            Issuer = _configuration["JwtSettings:Admin:Issuer"],
-            Audience = _configuration["JwtSettings:Admin:Audience"],
+            Issuer = issuer,
+            Audience = audience,
             Subject = new ClaimsIdentity(claims),
-            Expires = DateTime.Now.AddMinutes(15),
-            SigningCredentials = new SigningCredentials
-                (authSigningKey, SecurityAlgorithms.HmacSha256)
+            Expires = DateTime.UtcNow.AddMinutes(15),
+            SigningCredentials = new SigningCredentials(authSigningKey, SecurityAlgorithms.HmacSha256)
         };
 
+        var tokenHandler = new JwtSecurityTokenHandler();
         var token = tokenHandler.CreateToken(tokenDescriptor);
-
         return tokenHandler.WriteToken(token);
     }
 }

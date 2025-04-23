@@ -2,12 +2,7 @@
 
 namespace SpotifyTrackView.Entity;
 
-public class Listener
+public class Listener: AppUser
 {
-    public int Id { get; set; }
-    [StringLength(100)] public string Name { get; set; }
-    [StringLength(100)] public string Email { get; set; }
-    [StringLength(100)] public string Password { get; set; }
-    public DateTime CreatedAt { get; set; } = DateTime.Now;
-    public DateTime? UpdatedAt { get; set; }
+
 }
