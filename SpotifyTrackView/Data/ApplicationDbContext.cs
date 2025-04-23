@@ -10,4 +10,6 @@ public class ApplicationDbContext(DbContextOptions<ApplicationDbContext> options
     public DbSet<Listener> Listeners { get; set; }
     public DbSet<Influencer> Influencers { get; set; }
     public DbSet<Genre> Genres { get; set; }
+    public DbSet<Country> Countries { get; set; }
+    public DbSet<Region> Regions { get; set; }
 }

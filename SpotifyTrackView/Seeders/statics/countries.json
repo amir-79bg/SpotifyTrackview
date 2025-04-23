@@ -1,0 +1,1882 @@
+[
+  {
+    "iso": "AE",
+    "name": "United Arab Emirates",
+    "name_fa": "امارات متحده عربی",
+    "iso3": "ARE",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AF",
+    "name": "Afghanistan",
+    "name_fa": "افغانستان",
+    "iso3": "AFG",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AG",
+    "name": "Antigua and Barbuda",
+    "name_fa": "آنتیگوا و باربودا",
+    "iso3": "ATG",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AI",
+    "name": "Anguilla",
+    "name_fa": "آنگویلا",
+    "iso3": "AIA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AL",
+    "name": "Albania",
+    "name_fa": "آلبانی",
+    "iso3": "ALB",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AM",
+    "name": "Armenia",
+    "name_fa": "ارمنستان",
+    "iso3": "ARM",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AO",
+    "name": "Angola",
+    "name_fa": "آنگولا",
+    "iso3": "AGO",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AQ",
+    "name": "Antarctica",
+    "name_fa": "قطب جنوب",
+    "iso3": "ATA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AR",
+    "name": "Argentina",
+    "name_fa": "آرژانتین",
+    "iso3": "ARG",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AS",
+    "name": "American Samoa",
+    "name_fa": "ساموآ آمریکا",
+    "iso3": "ASM",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AT",
+    "name": "Austria",
+    "name_fa": "اتریش",
+    "iso3": "AUT",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AU",
+    "name": "Australia",
+    "name_fa": "استرالیا",
+    "iso3": "AUS",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AW",
+    "name": "Aruba",
+    "name_fa": "آروبا",
+    "iso3": "ABW",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "AZ",
+    "name": "Azerbaijan",
+    "name_fa": "آذربایجان",
+    "iso3": "AZE",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BA",
+    "name": "Bosnia and Herzegovina",
+    "name_fa": "بوسنی و هرزگوین",
+    "iso3": "BIH",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BB",
+    "name": "Barbados",
+    "name_fa": "باربادوس",
+    "iso3": "BRB",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BD",
+    "name": "Bangladesh",
+    "name_fa": "بنگلادش",
+    "iso3": "BGD",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BE",
+    "name": "Belgium",
+    "name_fa": "بلژیک",
+    "iso3": "BEL",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BF",
+    "name": "Burkina Faso",
+    "name_fa": "بورکینافاسو",
+    "iso3": "BFA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BG",
+    "name": "Bulgaria",
+    "name_fa": "بلغارستان",
+    "iso3": "BGR",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BH",
+    "name": "Bahrain",
+    "name_fa": "بحرین",
+    "iso3": "BHR",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BI",
+    "name": "Burundi",
+    "name_fa": "بوروندی",
+    "iso3": "BDI",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BJ",
+    "name": "Benin",
+    "name_fa": "بنین",
+    "iso3": "BEN",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BL",
+    "name": "Saint Barthelemy",
+    "name_fa": null,
+    "iso3": "BLM",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-11-19 08:57:13"
+  },
+  {
+    "iso": "BM",
+    "name": "Bermuda",
+    "name_fa": "برمودا",
+    "iso3": "BMU",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:23"
+  },
+  {
+    "iso": "BN",
+    "name": "Brunei",
+    "name_fa": "برونئی",
+    "iso3": "BRN",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BO",
+    "name": "Bolivia",
+    "name_fa": "بولیوی",
+    "iso3": "BOL",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BQ",
+    "name": "Bonaire, Saint Eustatius and Saba ",
+    "name_fa": "آنتیل هلند",
+    "iso3": "BES",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BR",
+    "name": "Brazil",
+    "name_fa": "برزیل",
+    "iso3": "BRA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BS",
+    "name": "Bahamas",
+    "name_fa": "باهاما",
+    "iso3": "BHS",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BT",
+    "name": "Bhutan",
+    "name_fa": "پادشاهی بوتان",
+    "iso3": "BTN",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BW",
+    "name": "Botswana",
+    "name_fa": "بوتسوانا",
+    "iso3": "BWA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BY",
+    "name": "Belarus",
+    "name_fa": "بلاروس",
+    "iso3": "BLR",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "BZ",
+    "name": "Belize",
+    "name_fa": "بلیز",
+    "iso3": "BLZ",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CA",
+    "name": "Canada",
+    "name_fa": "کانادا",
+    "iso3": "CAN",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CC",
+    "name": "Cocos Islands",
+    "name_fa": "ترینیداد و توباگو",
+    "iso3": "CCK",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CD",
+    "name": "Democratic Republic of the Congo",
+    "name_fa": "کنگو، جمهوری دمکراتیک",
+    "iso3": "COD",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CF",
+    "name": "Central African Republic",
+    "name_fa": "آفریقای مرکزی",
+    "iso3": "CAF",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CG",
+    "name": "Republic of the Congo",
+    "name_fa": "کنگو",
+    "iso3": "COG",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CH",
+    "name": "Switzerland",
+    "name_fa": "سوئیس",
+    "iso3": "CHE",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CI",
+    "name": "Ivory Coast",
+    "name_fa": "ساحل عاج",
+    "iso3": "CIV",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CK",
+    "name": "Cook Islands",
+    "name_fa": "جزایر کوک",
+    "iso3": "COK",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CL",
+    "name": "Chile",
+    "name_fa": "شیلی",
+    "iso3": "CHL",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CM",
+    "name": "Cameroon",
+    "name_fa": "کامرون",
+    "iso3": "CMR",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CN",
+    "name": "China",
+    "name_fa": "چین",
+    "iso3": "CHN",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CO",
+    "name": "Colombia",
+    "name_fa": "کلمبیا",
+    "iso3": "COL",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CR",
+    "name": "Costa Rica",
+    "name_fa": "کاستاریکا",
+    "iso3": "CRI",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CU",
+    "name": "Cuba",
+    "name_fa": "کوبا",
+    "iso3": "CUB",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CV",
+    "name": "Cabo Verde",
+    "name_fa": "کیپ ورد",
+    "iso3": "CPV",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CW",
+    "name": "Curacao",
+    "name_fa": null,
+    "iso3": "CUW",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-11-19 08:57:13"
+  },
+  {
+    "iso": "CX",
+    "name": "Christmas Island",
+    "name_fa": null,
+    "iso3": "CXR",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-11-19 08:57:13"
+  },
+  {
+    "iso": "CY",
+    "name": "Cyprus",
+    "name_fa": "قبرس",
+    "iso3": "CYP",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "CZ",
+    "name": "Czechia",
+    "name_fa": "جمهوری چک",
+    "iso3": "CZE",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "DE",
+    "name": "Germany",
+    "name_fa": "آلمان",
+    "iso3": "DEU",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "DJ",
+    "name": "Djibouti",
+    "name_fa": "جیبوتی",
+    "iso3": "DJI",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "DK",
+    "name": "Denmark",
+    "name_fa": "دانمارک",
+    "iso3": "DNK",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "DM",
+    "name": "Dominica",
+    "name_fa": "دومینیکا",
+    "iso3": "DMA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "DO",
+    "name": "Dominican Republic",
+    "name_fa": "جمهوری دومینیکن",
+    "iso3": "DOM",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "DZ",
+    "name": "Algeria",
+    "name_fa": "الجزایر",
+    "iso3": "DZA",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "EC",
+    "name": "Ecuador",
+    "name_fa": "اکوادور",
+    "iso3": "ECU",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "EE",
+    "name": "Estonia",
+    "name_fa": "استونی",
+    "iso3": "EST",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "EG",
+    "name": "Egypt",
+    "name_fa": "مصر",
+    "iso3": "EGY",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "EH",
+    "name": "Western Sahara",
+    "name_fa": null,
+    "iso3": "ESH",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-11-19 08:57:13"
+  },
+  {
+    "iso": "ER",
+    "name": "Eritrea",
+    "name_fa": "اریتره",
+    "iso3": "ERI",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "ES",
+    "name": "Spain",
+    "name_fa": "اسپانیا",
+    "iso3": "ESP",
+    "created_at": "2023-11-19 08:57:13",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "ET",
+    "name": "Ethiopia",
+    "name_fa": "اتیوپی",
+    "iso3": "ETH",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "FI",
+    "name": "Finland",
+    "name_fa": "فنلاند",
+    "iso3": "FIN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "FJ",
+    "name": "Fiji",
+    "name_fa": "جزایر فیجی",
+    "iso3": "FJI",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "FK",
+    "name": "Falkland Islands",
+    "name_fa": "جزایر فالکلند (مالویناس)",
+    "iso3": "FLK",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "FM",
+    "name": "Micronesia",
+    "name_fa": "ایالات فدرال میکرونزی",
+    "iso3": "FSM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "FO",
+    "name": "Faroe Islands",
+    "name_fa": null,
+    "iso3": "FRO",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "FR",
+    "name": "France",
+    "name_fa": "فرانسه",
+    "iso3": "FRA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GA",
+    "name": "Gabon",
+    "name_fa": "گابون",
+    "iso3": "GAB",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GB",
+    "name": "United Kingdom",
+    "name_fa": "انگلستان",
+    "iso3": "GBR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GD",
+    "name": "Grenada",
+    "name_fa": "گرنادا",
+    "iso3": "GRD",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GE",
+    "name": "Georgia",
+    "name_fa": "گرجستان",
+    "iso3": "GEO",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GF",
+    "name": "French Guiana",
+    "name_fa": "گویان فرانسه",
+    "iso3": "GUF",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GG",
+    "name": "Guernsey",
+    "name_fa": null,
+    "iso3": "GGY",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "GH",
+    "name": "Ghana",
+    "name_fa": "غنا",
+    "iso3": "GHA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GI",
+    "name": "Gibraltar",
+    "name_fa": "جبل الطارق",
+    "iso3": "GIB",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GL",
+    "name": "Greenland",
+    "name_fa": "گرینلند",
+    "iso3": "GRL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GM",
+    "name": "Gambia",
+    "name_fa": "گامبیا",
+    "iso3": "GMB",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GN",
+    "name": "Guinea",
+    "name_fa": "گینه",
+    "iso3": "GIN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GP",
+    "name": "Guadeloupe",
+    "name_fa": "جزیره گوادلوپ",
+    "iso3": "GLP",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GQ",
+    "name": "Equatorial Guinea",
+    "name_fa": "گینه استوایی",
+    "iso3": "GNQ",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GR",
+    "name": "Greece",
+    "name_fa": "یونان",
+    "iso3": "GRC",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GT",
+    "name": "Guatemala",
+    "name_fa": "گواتمالا",
+    "iso3": "GTM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GU",
+    "name": "Guam",
+    "name_fa": null,
+    "iso3": "GUM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "GW",
+    "name": "Guinea-Bissau",
+    "name_fa": "گینه بیسائو",
+    "iso3": "GNB",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "GY",
+    "name": "Guyana",
+    "name_fa": "گویان",
+    "iso3": "GUY",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "HK",
+    "name": "Hong Kong",
+    "name_fa": "هنگ کنگ",
+    "iso3": "HKG",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "HN",
+    "name": "Honduras",
+    "name_fa": "هندوراس",
+    "iso3": "HND",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "HR",
+    "name": "Croatia",
+    "name_fa": "کرواسی",
+    "iso3": "HRV",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "HT",
+    "name": "Haiti",
+    "name_fa": "هائیتی",
+    "iso3": "HTI",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "HU",
+    "name": "Hungary",
+    "name_fa": "مجارستان",
+    "iso3": "HUN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "ID",
+    "name": "Indonesia",
+    "name_fa": "اندونزی",
+    "iso3": "IDN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "IE",
+    "name": "Ireland",
+    "name_fa": "جمهوری ایرلند",
+    "iso3": "IRL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "IL",
+    "name": "Israel",
+    "name_fa": null,
+    "iso3": "ISR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "IM",
+    "name": "Isle of Man",
+    "name_fa": null,
+    "iso3": "IMN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "IN",
+    "name": "India",
+    "name_fa": "هند",
+    "iso3": "IND",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "IO",
+    "name": "British Indian Ocean Territory",
+    "name_fa": null,
+    "iso3": "IOT",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "IQ",
+    "name": "Iraq",
+    "name_fa": "عراق",
+    "iso3": "IRQ",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "IR",
+    "name": "Iran",
+    "name_fa": "ایران",
+    "iso3": "IRN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "IS",
+    "name": "Iceland",
+    "name_fa": "ایسلند",
+    "iso3": "ISL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "IT",
+    "name": "Italy",
+    "name_fa": "ایتالیا",
+    "iso3": "ITA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "JE",
+    "name": "Jersey",
+    "name_fa": null,
+    "iso3": "JEY",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "JM",
+    "name": "Jamaica",
+    "name_fa": "جامائیکا",
+    "iso3": "JAM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "JO",
+    "name": "Jordan",
+    "name_fa": "اردن",
+    "iso3": "JOR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "JP",
+    "name": "Japan",
+    "name_fa": "ژاپن",
+    "iso3": "JPN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "KE",
+    "name": "Kenya",
+    "name_fa": "کنیا",
+    "iso3": "KEN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "KG",
+    "name": "Kyrgyzstan",
+    "name_fa": "قرقیزستان",
+    "iso3": "KGZ",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "KH",
+    "name": "Cambodia",
+    "name_fa": "کامبوج",
+    "iso3": "KHM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:24"
+  },
+  {
+    "iso": "KI",
+    "name": "Kiribati",
+    "name_fa": "کیریباتی",
+    "iso3": "KIR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "KM",
+    "name": "Comoros",
+    "name_fa": "کومور",
+    "iso3": "COM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "KN",
+    "name": "Saint Kitts and Nevis",
+    "name_fa": "سنت کیتس و نویس",
+    "iso3": "KNA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "KP",
+    "name": "North Korea",
+    "name_fa": null,
+    "iso3": "PRK",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "KR",
+    "name": "South Korea",
+    "name_fa": "کره جنوبی",
+    "iso3": "KOR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "KW",
+    "name": "Kuwait",
+    "name_fa": "کویت",
+    "iso3": "KWT",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "KY",
+    "name": "Cayman Islands",
+    "name_fa": "جزایر کیمن",
+    "iso3": "CYM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "KZ",
+    "name": "Kazakhstan",
+    "name_fa": "قزاقستان",
+    "iso3": "KAZ",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LA",
+    "name": "Laos",
+    "name_fa": "لائوس",
+    "iso3": "LAO",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LB",
+    "name": "Lebanon",
+    "name_fa": "لبنان",
+    "iso3": "LBN",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LC",
+    "name": "Saint Lucia",
+    "name_fa": "سنت لوسیا",
+    "iso3": "LCA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LK",
+    "name": "Sri Lanka",
+    "name_fa": "سریلانکا",
+    "iso3": "LKA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LR",
+    "name": "Liberia",
+    "name_fa": "لیبریا",
+    "iso3": "LBR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LS",
+    "name": "Lesotho",
+    "name_fa": "لسوتو",
+    "iso3": "LSO",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LT",
+    "name": "Lithuania",
+    "name_fa": "لیتوانی",
+    "iso3": "LTU",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LU",
+    "name": "Luxembourg",
+    "name_fa": "لوکزامبورگ",
+    "iso3": "LUX",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LV",
+    "name": "Latvia",
+    "name_fa": "لتونی",
+    "iso3": "LVA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "LY",
+    "name": "Libya",
+    "name_fa": "لیبی",
+    "iso3": "LBY",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MA",
+    "name": "Morocco",
+    "name_fa": "مراکش",
+    "iso3": "MAR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MD",
+    "name": "Moldova",
+    "name_fa": "مولداوی",
+    "iso3": "MDA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "ME",
+    "name": "Montenegro",
+    "name_fa": "مونته\u200Cنگرو",
+    "iso3": "MNE",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MF",
+    "name": "Saint Martin",
+    "name_fa": null,
+    "iso3": "MAF",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "MG",
+    "name": "Madagascar",
+    "name_fa": "ماداگاسکار",
+    "iso3": "MDG",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MH",
+    "name": "Marshall Islands",
+    "name_fa": "جزایر مارشال",
+    "iso3": "MHL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MK",
+    "name": "North Macedonia",
+    "name_fa": "مقدونیه",
+    "iso3": "MKD",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "ML",
+    "name": "Mali",
+    "name_fa": "مالی",
+    "iso3": "MLI",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MM",
+    "name": "Myanmar",
+    "name_fa": "میانمار",
+    "iso3": "MMR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MN",
+    "name": "Mongolia",
+    "name_fa": "مغولستان",
+    "iso3": "MNG",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MO",
+    "name": "Macao",
+    "name_fa": "ماکائو",
+    "iso3": "MAC",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MP",
+    "name": "Northern Mariana Islands",
+    "name_fa": "جزایر ماریانای شمالی",
+    "iso3": "MNP",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MQ",
+    "name": "Martinique",
+    "name_fa": "مارتینیک",
+    "iso3": "MTQ",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MR",
+    "name": "Mauritania",
+    "name_fa": "موریتانی",
+    "iso3": "MRT",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MS",
+    "name": "Montserrat",
+    "name_fa": "مونتسرات",
+    "iso3": "MSR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MT",
+    "name": "Malta",
+    "name_fa": "مالت",
+    "iso3": "MLT",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MU",
+    "name": "Mauritius",
+    "name_fa": "موریس",
+    "iso3": "MUS",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MV",
+    "name": "Maldives",
+    "name_fa": "مالـــدیـــو",
+    "iso3": "MDV",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MW",
+    "name": "Malawi",
+    "name_fa": "مالاوی",
+    "iso3": "MWI",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MX",
+    "name": "Mexico",
+    "name_fa": "مکزیک",
+    "iso3": "MEX",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MY",
+    "name": "Malaysia",
+    "name_fa": "مالزی",
+    "iso3": "MYS",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "MZ",
+    "name": "Mozambique",
+    "name_fa": "موزامبیک",
+    "iso3": "MOZ",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NA",
+    "name": "Namibia",
+    "name_fa": "نامیبیا",
+    "iso3": "NAM",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NC",
+    "name": "New Caledonia",
+    "name_fa": "کالدونیای جدید",
+    "iso3": "NCL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NE",
+    "name": "Niger",
+    "name_fa": "نیجر",
+    "iso3": "NER",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NF",
+    "name": "Norfolk Island",
+    "name_fa": null,
+    "iso3": "NFK",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-11-19 08:57:14"
+  },
+  {
+    "iso": "NG",
+    "name": "Nigeria",
+    "name_fa": "نیجریه",
+    "iso3": "NGA",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NI",
+    "name": "Nicaragua",
+    "name_fa": "نیکاراگوئه",
+    "iso3": "NIC",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NL",
+    "name": "Netherlands",
+    "name_fa": "هلند",
+    "iso3": "NLD",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NO",
+    "name": "Norway",
+    "name_fa": "نروژ",
+    "iso3": "NOR",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NP",
+    "name": "Nepal",
+    "name_fa": "نپال",
+    "iso3": "NPL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NR",
+    "name": "Nauru",
+    "name_fa": "نائورو",
+    "iso3": "NRU",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NU",
+    "name": "Niue",
+    "name_fa": "نیووی",
+    "iso3": "NIU",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "NZ",
+    "name": "New Zealand",
+    "name_fa": "نیوزیلند",
+    "iso3": "NZL",
+    "created_at": "2023-11-19 08:57:14",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "OM",
+    "name": "Oman",
+    "name_fa": "عمان",
+    "iso3": "OMN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PA",
+    "name": "Panama",
+    "name_fa": "پاناما",
+    "iso3": "PAN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PE",
+    "name": "Peru",
+    "name_fa": "پرو",
+    "iso3": "PER",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PF",
+    "name": "French Polynesia",
+    "name_fa": "پلینزی فرانسه",
+    "iso3": "PYF",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PG",
+    "name": "Papua New Guinea",
+    "name_fa": "گینه جدید",
+    "iso3": "PNG",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PH",
+    "name": "Philippines",
+    "name_fa": "فیلیپین",
+    "iso3": "PHL",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PK",
+    "name": "Pakistan",
+    "name_fa": "پاکستان",
+    "iso3": "PAK",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PL",
+    "name": "Poland",
+    "name_fa": "لهستان",
+    "iso3": "POL",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PM",
+    "name": "Saint Pierre and Miquelon",
+    "name_fa": "سنت پیر و میکلون",
+    "iso3": "SPM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PR",
+    "name": "Puerto Rico",
+    "name_fa": "پورتوریکو",
+    "iso3": "PRI",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PT",
+    "name": "Portugal",
+    "name_fa": "پرتغال",
+    "iso3": "PRT",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PW",
+    "name": "Palau",
+    "name_fa": "پالائو",
+    "iso3": "PLW",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "PY",
+    "name": "Paraguay",
+    "name_fa": "پاراگوئه",
+    "iso3": "PRY",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "QA",
+    "name": "Qatar",
+    "name_fa": "قطر",
+    "iso3": "QAT",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "RE",
+    "name": "Reunion",
+    "name_fa": "ریونیون",
+    "iso3": "REU",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "RO",
+    "name": "Romania",
+    "name_fa": "رومانی",
+    "iso3": "ROU",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "RS",
+    "name": "Serbia",
+    "name_fa": "صربستان",
+    "iso3": "SRB",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "RU",
+    "name": "Russia",
+    "name_fa": "روسیه",
+    "iso3": "RUS",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "RW",
+    "name": "Rwanda",
+    "name_fa": "رواندا",
+    "iso3": "RWA",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SA",
+    "name": "Saudi Arabia",
+    "name_fa": "عربستان سعودی",
+    "iso3": "SAU",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SB",
+    "name": "Solomon Islands",
+    "name_fa": "جزایر سلیمان",
+    "iso3": "SLB",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SC",
+    "name": "Seychelles",
+    "name_fa": "سیشل",
+    "iso3": "SYC",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SD",
+    "name": "Sudan",
+    "name_fa": "سودان",
+    "iso3": "SDN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SE",
+    "name": "Sweden",
+    "name_fa": "سوئد",
+    "iso3": "SWE",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SG",
+    "name": "Singapore",
+    "name_fa": "سنگاپور",
+    "iso3": "SGP",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SH",
+    "name": "Saint Helena",
+    "name_fa": "سنت هلن",
+    "iso3": "SHN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SI",
+    "name": "Slovenia",
+    "name_fa": "اسلوونی",
+    "iso3": "SVN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SK",
+    "name": "Slovakia",
+    "name_fa": "اسلواکی",
+    "iso3": "SVK",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SL",
+    "name": "Sierra Leone",
+    "name_fa": "سیرالئون",
+    "iso3": "SLE",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SN",
+    "name": "Senegal",
+    "name_fa": "سنگال",
+    "iso3": "SEN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SO",
+    "name": "Somalia",
+    "name_fa": "سومالی",
+    "iso3": "SOM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SR",
+    "name": "Suriname",
+    "name_fa": "سورینام",
+    "iso3": "SUR",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SS",
+    "name": "South Sudan",
+    "name_fa": null,
+    "iso3": "SSD",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-11-19 08:57:15"
+  },
+  {
+    "iso": "ST",
+    "name": "Sao Tome and Principe",
+    "name_fa": "سائوتومه و پرینسیپ",
+    "iso3": "STP",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SV",
+    "name": "El Salvador",
+    "name_fa": "السالوادور",
+    "iso3": "SLV",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SX",
+    "name": "Sint Maarten",
+    "name_fa": null,
+    "iso3": "SXM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-11-19 08:57:15"
+  },
+  {
+    "iso": "SY",
+    "name": "Syria",
+    "name_fa": "سوریه",
+    "iso3": "SYR",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "SZ",
+    "name": "Eswatini",
+    "name_fa": "سوازیلند",
+    "iso3": "SWZ",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "TC",
+    "name": "Turks and Caicos Islands",
+    "name_fa": "جزایر ترک و کایکوس",
+    "iso3": "TCA",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "TD",
+    "name": "Chad",
+    "name_fa": "چاد",
+    "iso3": "TCD",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:25"
+  },
+  {
+    "iso": "TG",
+    "name": "Togo",
+    "name_fa": "توگو",
+    "iso3": "TGO",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TH",
+    "name": "Thailand",
+    "name_fa": "تایلند",
+    "iso3": "THA",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TJ",
+    "name": "Tajikistan",
+    "name_fa": "تاجیکستان",
+    "iso3": "TJK",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TL",
+    "name": "Timor Leste",
+    "name_fa": "تیمور شرقی",
+    "iso3": "TLS",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TM",
+    "name": "Turkmenistan",
+    "name_fa": "ترکمنستان",
+    "iso3": "TKM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TN",
+    "name": "Tunisia",
+    "name_fa": "تونس",
+    "iso3": "TUN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TO",
+    "name": "Tonga",
+    "name_fa": "تونگا",
+    "iso3": "TON",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TR",
+    "name": "Turkey",
+    "name_fa": "ترکیه",
+    "iso3": "TUR",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TT",
+    "name": "Trinidad and Tobago",
+    "name_fa": "ترینیداد و توباگو",
+    "iso3": "TTO",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TV",
+    "name": "Tuvalu",
+    "name_fa": "تووالو",
+    "iso3": "TUV",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TW",
+    "name": "Taiwan",
+    "name_fa": "تایوان",
+    "iso3": "TWN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "TZ",
+    "name": "Tanzania",
+    "name_fa": "تانزانیا",
+    "iso3": "TZA",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "UA",
+    "name": "Ukraine",
+    "name_fa": "اوکراین",
+    "iso3": "UKR",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "UG",
+    "name": "Uganda",
+    "name_fa": "اوگاندا",
+    "iso3": "UGA",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "UM",
+    "name": "United States Minor Outlying Islands",
+    "name_fa": "ایالات متحده جزایر کوچک حاشیهای",
+    "iso3": "UMI",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "US",
+    "name": "United States",
+    "name_fa": "ایالات متحده",
+    "iso3": "USA",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "UY",
+    "name": "Uruguay",
+    "name_fa": "اروگوئه",
+    "iso3": "URY",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "UZ",
+    "name": "Uzbekistan",
+    "name_fa": "ازبکستان",
+    "iso3": "UZB",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "VC",
+    "name": "Saint Vincent and the Grenadines",
+    "name_fa": "سنت وینسنت و گرنادین",
+    "iso3": "VCT",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "VE",
+    "name": "Venezuela",
+    "name_fa": "ونزوئلا",
+    "iso3": "VEN",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "VG",
+    "name": "British Virgin Islands",
+    "name_fa": "جزایر ویرجین (بریتانیا)",
+    "iso3": "VGB",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "VI",
+    "name": "U.S. Virgin Islands",
+    "name_fa": "جزایر ویرجین (آمریکا)",
+    "iso3": "VIR",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "VN",
+    "name": "Vietnam",
+    "name_fa": "ویتنام",
+    "iso3": "VNM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "VU",
+    "name": "Vanuatu",
+    "name_fa": "وانواتو",
+    "iso3": "VUT",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "WF",
+    "name": "Wallis and Futuna",
+    "name_fa": "جزایر والیس و فوتونا",
+    "iso3": "WLF",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "WS",
+    "name": "Samoa",
+    "name_fa": "ساموآ",
+    "iso3": "WSM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "YE",
+    "name": "Yemen",
+    "name_fa": "یمن",
+    "iso3": "YEM",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "YT",
+    "name": "Mayotte",
+    "name_fa": null,
+    "iso3": "MYT",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-11-19 08:57:15"
+  },
+  {
+    "iso": "ZA",
+    "name": "South Africa",
+    "name_fa": "آفریقا جنوبی",
+    "iso3": "ZAF",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "ZM",
+    "name": "Zambia",
+    "name_fa": "زامبیا",
+    "iso3": "ZMB",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  },
+  {
+    "iso": "ZW",
+    "name": "Zimbabwe",
+    "name_fa": "زیمباوه",
+    "iso3": "ZWE",
+    "created_at": "2023-11-19 08:57:15",
+    "updated_at": "2023-12-31 09:32:26"
+  }
+]

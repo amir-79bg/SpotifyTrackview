@@ -1,19 +1,57 @@
+using System.Configuration;
 using System.Text;
 using Microsoft.AspNetCore.Identity;
+using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using SpotifyTrackView.Data;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Interfaces;
+using SpotifyTrackView.Options;
+using SpotifyTrackView.Seeders;
 using SpotifyTrackView.Services;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.Configure<FileUploadOptions>(
+    builder.Configuration.GetSection("FileUpload")
+);
 // Load JWT config
 var jwtConfig = builder.Configuration.GetSection("JwtSettings");
 var adminSettings = jwtConfig.GetSection("Admin");
 var artistSettings = jwtConfig.GetSection("Artist");
 var influencerSettings = jwtConfig.GetSection("Influencer");
 var listenerSettings = jwtConfig.GetSection("Listener");
+
+builder.Services.Configure<ApiBehaviorOptions>(options =>
+{
+    options.InvalidModelStateResponseFactory = context =>
+    {
+        var errors = context.ModelState
+            .Where(e => e.Value?.Errors.Count > 0)
+            .ToDictionary(
+                kvp => kvp.Key,
+                kvp => kvp.Value!.Errors.Select(e => e.ErrorMessage).ToArray()
+            );
+
+        var problemDetails = new ValidationProblemDetails
+        {
+            Status = StatusCodes.Status400BadRequest,
+            Title = "Validation Failed",
+            Detail = "One or more validation errors occurred.",
+            Instance = context.HttpContext.Request.Path
+        };
+
+        foreach (var error in errors)
+        {
+            problemDetails.Errors.Add(error.Key, error.Value);
+        }
+
+        return new BadRequestObjectResult(problemDetails)
+        {
+            ContentTypes = { "application/json" }
+        };
+    };
+});
 
 builder.Services.AddScoped<IPasswordHasher<Admin>, PasswordHasher<Admin>>();
 builder.Services.AddScoped<IPasswordHasher<Influencer>, PasswordHasher<Influencer>>();
@@ -24,6 +62,7 @@ builder.Services.AddScoped<IAuthService<Admin>, AuthService<Admin>>();
 builder.Services.AddScoped<IAuthService<Influencer>, AuthService<Influencer>>();
 builder.Services.AddScoped<IAuthService<Artist>, AuthService<Artist>>();
 builder.Services.AddScoped<IAuthService<Listener>, AuthService<Listener>>();
+
 
 builder.Services.AddAuthentication()
     .AddJwtBearer("AdminScheme", options =>
@@ -138,8 +177,17 @@ if (app.Environment.IsDevelopment())
     app.UseSwaggerUI();
 }
 
+using (var scope = app.Services.CreateScope())
+{
+    var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+
+    await DatabaseSeeder.SeedCountries(db);
+    await DatabaseSeeder.SeedRegions(db);
+}
+
 app.UseHttpsRedirection();
 
+app.UseStaticFiles();
 app.UseAuthentication();
 app.UseAuthorization();
 
