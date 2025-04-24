@@ -1,4 +1,5 @@
 ﻿using System.Security.Claims;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
@@ -6,12 +7,13 @@ using SpotifyTrackView.Data;
 using SpotifyTrackView.DataTransferObjects.Requests.Profile;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Enums;
+using SpotifyTrackView.Validation.Rules;
 
 namespace SpotifyTrackView.Controllers.Api.V1.Shared;
 
 [ApiController]
 [Route("/api/v1/profile/favorite-genres")]
-public class UpdateFavoriteGenreController: BaseApiController
+public class UpdateFavoriteGenreController : BaseApiController
 {
     private ApplicationDbContext _db;
 
@@ -19,10 +21,13 @@ public class UpdateFavoriteGenreController: BaseApiController
     {
         _db = db;
     }
-    
+
     [HttpPut]
     [Authorize(AuthenticationSchemes = "ListenerScheme,ArtistScheme")]
-    public async Task<IActionResult> UpdateFavoriteGenres([FromBody] UpdateFavoriteGenresRequest request)
+    public async Task<IActionResult> UpdateFavoriteGenres(
+        [FromBody] UpdateFavoriteGenresRequest request,
+        [FromServices] IServiceProvider services
+    )
     {
         var userType = User.FindFirstValue(ClaimTypes.Role);
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
@@ -30,8 +35,12 @@ public class UpdateFavoriteGenreController: BaseApiController
         switch (userType)
         {
             case nameof(Entity.Artist):
-                if (request.MainGenreIds.Count > 3 || request.SubGenreIds.Count > 15 || request.OtherGenreIds.Count > 3)
-                    return BadRequest("Artist genre limits exceeded.");
+                var artistValidator = services.GetRequiredService<ArtistFavoriteGenreValidator>();
+                var result = await artistValidator.ValidateAsync(request);
+                if (!result.IsValid)
+                {
+                    return ValidationError(result.Errors);
+                }
 
                 var artist = await _db.Artists
                     .Include(a => a.ArtistGenres)
@@ -41,28 +50,35 @@ public class UpdateFavoriteGenreController: BaseApiController
 
                 var allGenres = new List<ArtistGenre>();
 
-                allGenres.AddRange(request.MainGenreIds.Select(id => new ArtistGenre { GenreId = id, Type = GenreType.Main }));
-                allGenres.AddRange(request.SubGenreIds.Select(id => new ArtistGenre { GenreId = id, Type = GenreType.Sub }));
-                allGenres.AddRange(request.OtherGenreIds.Select(id => new ArtistGenre { GenreId = id, Type = GenreType.Other }));
+                allGenres.AddRange(request.MainGenreIds.Select(id => new ArtistGenre
+                    { GenreId = id, Type = GenreType.Main }));
+                allGenres.AddRange(request.SubGenreIds.Select(id => new ArtistGenre
+                    { GenreId = id, Type = GenreType.Sub }));
+                allGenres.AddRange(request.OtherGenreIds.Select(id => new ArtistGenre
+                    { GenreId = id, Type = GenreType.Other }));
 
                 foreach (var ag in allGenres)
                 {
                     artist.ArtistGenres.Add(ag);
-                }                
-                
+                }
+
                 await _db.SaveChangesAsync();
-                return Ok("Genres updated for artist.");
+                return Success();
 
             case nameof(Listener):
-                if (request.MainGenreIds.Count > 5 || request.SubGenreIds.Any() || request.OtherGenreIds.Any())
-                    return BadRequest("Listeners can only select up to 5 main genres.");
+                var listenerValidator = services.GetRequiredService<ListenerFavoriteGenreValidator>();
+                var listenerResultValidator = await listenerValidator.ValidateAsync(request);
+                if (!listenerResultValidator.IsValid)
+                {
+                    return ValidationError(listenerResultValidator.Errors);
+                }
 
                 var listener = await _db.Listeners
                     .Include(l => l.ListenerGenres)
                     .FirstOrDefaultAsync(l => l.Id == userId);
 
                 listener.ListenerGenres.Clear();
-                
+
                 var listenerAllGenres = new List<ListenerGenre>();
 
                 listenerAllGenres.AddRange(request.MainGenreIds.Select(id => new ListenerGenre { GenreId = id }));
@@ -70,13 +86,13 @@ public class UpdateFavoriteGenreController: BaseApiController
                 foreach (var ag in listenerAllGenres)
                 {
                     listener.ListenerGenres.Add(ag);
-                }         
+                }
+
                 await _db.SaveChangesAsync();
-                return Ok(listener);
+                return Success();
 
             default:
                 return Unauthorized("Invalid user type.");
         }
     }
-
 }

@@ -44,12 +44,7 @@ public class ProfileController : BaseApiController
         var result = await validator.ValidateAsync(request);
         if (!result.IsValid)
         {
-            foreach (var error in result.Errors)
-            {
-                ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
-            }
-
-            return ValidationProblem(ModelState);
+            return ValidationError(result.Errors);
         }
 
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);

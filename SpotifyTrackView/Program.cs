@@ -7,6 +7,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SpotifyTrackView.Data;
+using SpotifyTrackView.DataTransferObjects.Requests.Profile;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Interfaces;
 using SpotifyTrackView.Options;
@@ -139,6 +140,10 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 builder.Services.AddControllers();
 
 builder.Services.AddValidatorsFromAssemblyContaining<UpdateProfileValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ListenerFavoriteGenreValidator>();
+builder.Services.AddValidatorsFromAssemblyContaining<ArtistFavoriteGenreValidator>();
+builder.Services.AddTransient<IValidator<UpdateFavoriteGenresRequest>, ListenerFavoriteGenreValidator>();
+builder.Services.AddTransient<IValidator<UpdateFavoriteGenresRequest>, ArtistFavoriteGenreValidator>();
 
 
 

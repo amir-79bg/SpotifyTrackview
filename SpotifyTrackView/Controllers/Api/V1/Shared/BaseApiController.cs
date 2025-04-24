@@ -1,20 +1,26 @@
-﻿using Microsoft.AspNetCore.Http.HttpResults;
-using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Mvc;
+using ValidationFailure = FluentValidation.Results.ValidationFailure;
 
 namespace SpotifyTrackView.Controllers.Api.V1.Shared;
 
 public class BaseApiController: ControllerBase
 {
-    protected IActionResult ValidationError(string field, string message)
+    protected IActionResult ValidationError(IEnumerable<ValidationFailure> errors)
     {
-        return BadRequest(new
+        foreach (var error in errors)
         {
-            status = 400,
-            message = "Validation Failed",
-            errors = new Dictionary<string, string[]>
-            {
-                { field, new[] { message } }
-            }
+            ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+        }
+
+        return ValidationProblem(ModelState);
+    }
+
+
+    protected IActionResult Success()
+    {
+        return Ok(new
+        {
+            Success = true
         });
     }
 }
