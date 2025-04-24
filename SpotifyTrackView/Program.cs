@@ -10,9 +10,11 @@ using SpotifyTrackView.Data;
 using SpotifyTrackView.DataTransferObjects.Requests.Profile;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Interfaces;
+using SpotifyTrackView.Interfaces.Services.Artist;
 using SpotifyTrackView.Options;
 using SpotifyTrackView.Seeders;
 using SpotifyTrackView.Services;
+using SpotifyTrackView.Services.Artist;
 using SpotifyTrackView.Validation.Rules;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -66,6 +68,7 @@ builder.Services.AddScoped<IAuthService<Admin>, AuthService<Admin>>();
 builder.Services.AddScoped<IAuthService<Influencer>, AuthService<Influencer>>();
 builder.Services.AddScoped<IAuthService<Artist>, AuthService<Artist>>();
 builder.Services.AddScoped<IAuthService<Listener>, AuthService<Listener>>();
+builder.Services.AddScoped<IProfileService, ProfileService>();
 
 
 builder.Services.AddAuthentication()
