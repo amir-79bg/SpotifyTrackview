@@ -69,4 +69,48 @@ public static class DatabaseSeeder
             await db.SaveChangesAsync();
         }
     }
+    
+    public static async Task SeedGenres(ApplicationDbContext db)
+    {
+        if (!db.Genres.Any())
+        {
+            var path = Path.Combine(Directory.GetCurrentDirectory(), "Seeders/statics", "genres.json");
+            var genresJson = await File.ReadAllTextAsync(path);
+
+            using var doc = JsonDocument.Parse(genresJson);
+            var root = doc.RootElement;
+
+            var genresToAdd = new List<Genre>();
+
+            foreach (var item in root.EnumerateArray())
+            {
+                var parent = new Genre
+                {
+                    Name = item.GetProperty("name").GetString()!,
+                    CreatedAt = DateTime.Now,
+                    UpdatedAt = DateTime.Now
+                };
+
+                // Check for subGenres
+                if (item.TryGetProperty("subGenres", out var subGenres))
+                {
+                    foreach (var subItem in subGenres.EnumerateArray())
+                    {
+                        parent.SubGenres.Add(new Genre
+                        {
+                            Name = subItem.GetProperty("name").GetString()!,
+                            ParentGenre = parent,
+                            CreatedAt = DateTime.Now,
+                            UpdatedAt = DateTime.Now
+                        });
+                    }
+                }
+
+                genresToAdd.Add(parent);
+            }
+
+            db.Genres.AddRange(genresToAdd);
+            await db.SaveChangesAsync();
+        }
+    }
 }

@@ -183,6 +183,7 @@ using (var scope = app.Services.CreateScope())
 
     await DatabaseSeeder.SeedCountries(db);
     await DatabaseSeeder.SeedRegions(db);
+    await DatabaseSeeder.SeedGenres(db);
 }
 
 app.UseHttpsRedirection();

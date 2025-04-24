@@ -1,0 +1,25 @@
+﻿ [
+  {
+    "name": "Rock",
+    "subGenres": [
+      { "name": "Classic Rock" },
+      { "name": "Alternative Rock" },
+      { "name": "Hard Rock" }
+    ]
+  },
+  {
+    "name": "Electronic",
+    "subGenres": [
+      { "name": "House" },
+      { "name": "Techno" },
+      { "name": "Trance" }
+    ]
+  },
+  {
+    "name": "Jazz",
+    "subGenres": [
+      { "name": "Smooth Jazz" },
+      { "name": "Bebop" }
+    ]
+  }
+]
