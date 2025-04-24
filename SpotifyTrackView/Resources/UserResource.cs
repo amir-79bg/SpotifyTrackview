@@ -13,9 +13,7 @@ public class UserResource
             user.Email,
             user.FirstName,
             user.LastName,
-            ThumbnailUrl = user.ThumbnailUrl?.StartsWith("http") == true
-                ? user.ThumbnailUrl
-                : baseUrl + user.ThumbnailUrl,
+            ThumbnailUrl = user.ThumbnailUrl != null ? baseUrl + user.ThumbnailUrl : null,
             user.Country,
             user.Region,
             user.CreatedAt,

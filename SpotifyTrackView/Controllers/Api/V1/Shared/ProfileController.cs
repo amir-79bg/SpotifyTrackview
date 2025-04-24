@@ -1,26 +1,33 @@
 ﻿using System.Security.Claims;
+using FluentValidation;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Options;
 using SpotifyTrackView.Data;
 using SpotifyTrackView.DataTransferObjects.Requests;
+using SpotifyTrackView.DataTransferObjects.Requests.Profile;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Options;
 using SpotifyTrackView.Resources;
+using SpotifyTrackView.Validation.Rules;
 
 namespace SpotifyTrackView.Controllers.Api.V1.Shared;
 
 [ApiController]
 [Route("/api/v1/profile")]
-public class ProfileController: BaseApiController
+public class ProfileController : BaseApiController
 {
     private readonly ApplicationDbContext _context;
     private readonly IWebHostEnvironment _env;
     private readonly FileUploadOptions _opts;
 
 
-    public ProfileController(ApplicationDbContext context, IWebHostEnvironment env, IOptions<FileUploadOptions> opts)
+    public ProfileController(
+        ApplicationDbContext context,
+        IWebHostEnvironment env,
+        IOptions<FileUploadOptions> opts
+    )
     {
         _context = context;
         _env = env;
@@ -29,74 +36,55 @@ public class ProfileController: BaseApiController
 
     [HttpPut]
     [Authorize(AuthenticationSchemes = "InfluencerScheme,ListenerScheme,ArtistScheme")]
-    public async Task<IActionResult> UpdateProfile([FromForm] UpdateProfileDto dto)
+    public async Task<IActionResult> UpdateProfile( [FromForm] UpdateProfileRequest request)
     {
-        if (! await _context.Countries.AnyAsync(c => c.Iso2 == dto.Country))
+        var validator = new UpdateProfileValidator(_context);
+        var result = await validator.ValidateAsync(request);
+        if (!result.IsValid)
         {
-            return ValidationError("Country", "Invalid country.");
-        }
-        
-        if (! await _context.Regions.AnyAsync(r => r.Iso2 == dto.Region))
-        {
-            return ValidationError("Region", "Invalid region.");
+            foreach (var error in result.Errors)
+            {
+                ModelState.AddModelError(error.PropertyName, error.ErrorMessage);
+            }
+
+            return ValidationProblem(ModelState);
         }
 
         var userId = int.Parse(User.FindFirstValue(ClaimTypes.NameIdentifier)!);
         var role = User.FindFirstValue(ClaimTypes.Role);
 
         string? url = null;
-        if (! (dto.ThumbnailUrl == null || dto.ThumbnailUrl.Length == 0))
+        if (!(request.ThumbnailUrl == null || request.ThumbnailUrl.Length == 0))
         {
-            if (Request.Form.Files.Count > 1)
-            {
-                return ValidationError("ThumbnailUrl", "Only one file can be uploaded.");
-            }
-            // Validate content type
-            var allowedTypes = new[] { "image/jpeg", "image/png", "image/webp" };
-            if (!allowedTypes.Contains(dto.ThumbnailUrl.ContentType))
-            {
-                return ValidationError("ThumbnailUrl", "Only JPG, PNG, and WEBP images are allowed.");
-            }
-                
             var uploadDir = Path.Combine(_env.WebRootPath, _opts.BasePath);
             if (!Directory.Exists(uploadDir))
             {
                 Directory.CreateDirectory(uploadDir);
             }
 
-            // 2) Build a unique filename
-            var ext = Path.GetExtension(dto.ThumbnailUrl.FileName);
+            var ext = Path.GetExtension(request.ThumbnailUrl.FileName);
             var filename = $"{Guid.NewGuid()}{ext}";
             var filePath = Path.Combine(uploadDir, filename);
 
-            // 3) Save to disk
             using var stream = new FileStream(filePath, FileMode.Create);
-            await dto.ThumbnailUrl.CopyToAsync(stream);
+            await request.ThumbnailUrl.CopyToAsync(stream);
 
-            // 4) Return the URL, matching how you serve static files
             url = $"{_opts.RequestPath}/{filename}";
         }
-        
 
-        AppUser user = role switch
+
+        AppUser? user = role switch
         {
             nameof(Entity.Artist) => await _context.Artists.FindAsync(userId),
             nameof(Entity.Influencer) => await _context.Influencers.FindAsync(userId),
             nameof(Entity.Listener) => await _context.Listeners.FindAsync(userId),
+            _ => throw new Exception()
         };
 
-        AppUser userEntity = dto.TransformToAppUser(url);
-        
+        AppUser userEntity = request.TransformToAppUser(userId, url);
+
         await _context.SaveChangesAsync();
 
         return Ok(UserResource.From(userEntity, Request));
     }
 }
-
-/*
-FirstName:Iman
-LastName:Parvizi
-Country:IR
-Region:IR
-ThumbnailUrl:https://kir.com
-*/

@@ -1,9 +1,10 @@
-using System.Configuration;
 using System.Text;
+using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using SpotifyTrackView.Data;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Interfaces;
@@ -135,6 +136,7 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 
 builder.Services.AddControllers();
 
+
 builder.Services.AddSwaggerGen(c =>
 {
     // Define the security schemes for all user types
@@ -142,24 +144,24 @@ builder.Services.AddSwaggerGen(c =>
 
     foreach (var scheme in schemes)
     {
-        c.AddSecurityDefinition(scheme, new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+        c.AddSecurityDefinition(scheme, new OpenApiSecurityScheme
         {
             Name = "Authorization",
-            Type = Microsoft.OpenApi.Models.SecuritySchemeType.Http,
+            Type = SecuritySchemeType.Http,
             Scheme = "Bearer",
             BearerFormat = "JWT",
-            In = Microsoft.OpenApi.Models.ParameterLocation.Header,
+            In = ParameterLocation.Header,
             Description = $"JWT Authorization header using the Bearer scheme for {scheme}. Enter your token only."
         });
 
-        c.AddSecurityRequirement(new Microsoft.OpenApi.Models.OpenApiSecurityRequirement
+        c.AddSecurityRequirement(new OpenApiSecurityRequirement
         {
             {
-                new Microsoft.OpenApi.Models.OpenApiSecurityScheme
+                new OpenApiSecurityScheme
                 {
-                    Reference = new Microsoft.OpenApi.Models.OpenApiReference
+                    Reference = new OpenApiReference
                     {
-                        Type = Microsoft.OpenApi.Models.ReferenceType.SecurityScheme,
+                        Type = ReferenceType.SecurityScheme,
                         Id = scheme
                     }
                 },
@@ -168,6 +170,7 @@ builder.Services.AddSwaggerGen(c =>
         });
     }
 });
+
 var app = builder.Build();
 
 // Configure the HTTP request pipeline.
