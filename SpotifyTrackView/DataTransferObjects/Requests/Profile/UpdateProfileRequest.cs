@@ -14,6 +14,10 @@ public class UpdateProfileRequest
 
     [StringLength(2)]
     public string? Region { get; set; }
+    
+    [MinLength(30)]
+    [StringLength(100)]
+    public string? Bio { get; set; }
 
     public AppUser TransformToAppUser(int userId, string? thumbnailUrl)
     {
@@ -23,6 +27,7 @@ public class UpdateProfileRequest
         user.LastName = LastName;
         user.Country = Country;
         user.Region = Region;
+        user.Bio = Bio;
         user.ThumbnailUrl = thumbnailUrl;
         user.UpdatedAt = DateTime.Now;
 

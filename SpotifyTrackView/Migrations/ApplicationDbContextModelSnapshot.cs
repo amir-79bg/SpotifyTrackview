@@ -60,6 +60,9 @@ namespace SpotifyTrackView.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
@@ -179,6 +182,9 @@ namespace SpotifyTrackView.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
@@ -224,6 +230,9 @@ namespace SpotifyTrackView.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");

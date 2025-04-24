@@ -1,4 +1,5 @@
 using System.Text;
+using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,6 +12,7 @@ using SpotifyTrackView.Interfaces;
 using SpotifyTrackView.Options;
 using SpotifyTrackView.Seeders;
 using SpotifyTrackView.Services;
+using SpotifyTrackView.Validation.Rules;
 
 var builder = WebApplication.CreateBuilder(args);
 builder.Services.Configure<FileUploadOptions>(
@@ -135,6 +137,9 @@ builder.Services.AddDbContext<ApplicationDbContext>(options =>
 });
 
 builder.Services.AddControllers();
+
+builder.Services.AddValidatorsFromAssemblyContaining<UpdateProfileValidator>();
+
 
 
 builder.Services.AddSwaggerGen(c =>

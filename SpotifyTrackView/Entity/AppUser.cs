@@ -13,6 +13,7 @@ public class AppUser: IAppUser
     public string? ThumbnailUrl { get; set; }
     public string? Country { get; set; }
     public string? Region { get; set; }
+    public string? Bio {get; set;}
     public DateTime CreatedAt { get; set; } = DateTime.Now;
     public DateTime? UpdatedAt { get; set; }
 }

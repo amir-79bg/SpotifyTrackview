@@ -12,7 +12,7 @@ using SpotifyTrackView.Data;
 namespace SpotifyTrackView.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250424112322_InitialCreate")]
+    [Migration("20250424171230_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -62,6 +62,9 @@ namespace SpotifyTrackView.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
@@ -182,6 +185,9 @@ namespace SpotifyTrackView.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
 
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");
 
@@ -227,6 +233,9 @@ namespace SpotifyTrackView.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<string>("Bio")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Country")
                         .HasColumnType("nvarchar(max)");

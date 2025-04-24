@@ -14,6 +14,7 @@ public class UserResource
             user.FirstName,
             user.LastName,
             ThumbnailUrl = user.ThumbnailUrl != null ? baseUrl + user.ThumbnailUrl : null,
+            user.Bio,
             user.Country,
             user.Region,
             user.CreatedAt,

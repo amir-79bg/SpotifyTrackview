@@ -36,9 +36,11 @@ public class ProfileController : BaseApiController
 
     [HttpPut]
     [Authorize(AuthenticationSchemes = "InfluencerScheme,ListenerScheme,ArtistScheme")]
-    public async Task<IActionResult> UpdateProfile( [FromForm] UpdateProfileRequest request)
+    public async Task<IActionResult> UpdateProfile(
+        [FromForm] UpdateProfileRequest request,
+        IValidator<UpdateProfileRequest> validator
+    )
     {
-        var validator = new UpdateProfileValidator(_context);
         var result = await validator.ValidateAsync(request);
         if (!result.IsValid)
         {
