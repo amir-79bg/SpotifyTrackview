@@ -68,7 +68,7 @@ public class AddPlaylistController(
                     p.ThumbnailUrl,
                     p.Status,
                     p.CreatedAt
-                })
+                }).OrderByDescending(p => p.CreatedAt)
                 .ToListAsync();
 
             return Ok(influencerPlaylists);
@@ -99,6 +99,7 @@ public class AddPlaylistController(
                 p.Status,
                 p.CreatedAt
             })
+            .OrderByDescending(p => p.CreatedAt)
             .ToListAsync();
 
         return Ok(playlists);

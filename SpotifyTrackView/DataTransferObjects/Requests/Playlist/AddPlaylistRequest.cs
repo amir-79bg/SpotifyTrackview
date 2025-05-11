@@ -4,5 +4,5 @@ namespace SpotifyTrackView.DataTransferObjects.Requests.Playlist;
 
 public class AddPlaylistRequest
 {
-    [Required] public string PlaylistUrl { get; set; }
+    [Required] public required string PlaylistUrl { get; set; }
 } 
