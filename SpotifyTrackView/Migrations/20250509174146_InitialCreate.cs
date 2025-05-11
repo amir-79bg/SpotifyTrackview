@@ -33,6 +33,13 @@ namespace SpotifyTrackView.Migrations
                 {
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    SpotifyUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    SoundcloudUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    YoutubeUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    InstagramUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    FacebookUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    TiktokUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
+                    WebsiteUrl = table.Column<string>(type: "nvarchar(max)", nullable: true),
                     Email = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     Password = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: false),
                     FirstName = table.Column<string>(type: "nvarchar(100)", maxLength: 100, nullable: true),
@@ -172,6 +179,30 @@ namespace SpotifyTrackView.Migrations
                 });
 
             migrationBuilder.CreateTable(
+                name: "Playlists",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "int", nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    SpotifyId = table.Column<string>(type: "nvarchar(450)", nullable: false),
+                    Name = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    ThumbnailUrl = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    CreatedAt = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    UpdatedAt = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    InfluencerId = table.Column<int>(type: "int", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Playlists", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Playlists_Influencers_InfluencerId",
+                        column: x => x.InfluencerId,
+                        principalTable: "Influencers",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
+                });
+
+            migrationBuilder.CreateTable(
                 name: "ListenerGenres",
                 columns: table => new
                 {
@@ -207,14 +238,43 @@ namespace SpotifyTrackView.Migrations
                 column: "GenreId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Artists_Email",
+                table: "Artists",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Genres_ParentGenreId",
                 table: "Genres",
                 column: "ParentGenreId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Influencers_Email",
+                table: "Influencers",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_ListenerGenres_GenreId",
                 table: "ListenerGenres",
                 column: "GenreId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Listeners_Email",
+                table: "Listeners",
+                column: "Email",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Playlists_InfluencerId",
+                table: "Playlists",
+                column: "InfluencerId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Playlists_SpotifyId",
+                table: "Playlists",
+                column: "SpotifyId",
+                unique: true);
         }
 
         /// <inheritdoc />
@@ -230,10 +290,10 @@ namespace SpotifyTrackView.Migrations
                 name: "Countries");
 
             migrationBuilder.DropTable(
-                name: "Influencers");
+                name: "ListenerGenres");
 
             migrationBuilder.DropTable(
-                name: "ListenerGenres");
+                name: "Playlists");
 
             migrationBuilder.DropTable(
                 name: "Regions");
@@ -246,6 +306,9 @@ namespace SpotifyTrackView.Migrations
 
             migrationBuilder.DropTable(
                 name: "Listeners");
+
+            migrationBuilder.DropTable(
+                name: "Influencers");
         }
     }
 }

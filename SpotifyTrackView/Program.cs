@@ -4,6 +4,7 @@ using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using Microsoft.IdentityModel.Tokens;
 using Microsoft.OpenApi.Models;
 using SpotifyTrackView.Data;
@@ -12,6 +13,7 @@ using SpotifyTrackView.Entity;
 using SpotifyTrackView.Interfaces;
 using SpotifyTrackView.Interfaces.Services.Artist;
 using SpotifyTrackView.Options;
+using SpotifyTrackView.Repositories.Api;
 using SpotifyTrackView.Seeders;
 using SpotifyTrackView.Services;
 using SpotifyTrackView.Services.Artist;
@@ -70,6 +72,27 @@ builder.Services.AddScoped<IAuthService<Artist>, AuthService<Artist>>();
 builder.Services.AddScoped<IAuthService<Listener>, AuthService<Listener>>();
 builder.Services.AddScoped<IProfileService, ProfileService>();
 
+// Add Spotify services
+builder.Services.AddHttpClient<ISpotifyAuthRepository, SpotifyAuthRepository>();
+builder.Services.AddHttpClient<ISpotifyPlaylistRepository, SpotifyPlaylistRepository>();
+
+// Add cache service
+builder.Services.AddStackExchangeRedisCache(options =>
+{
+    options.Configuration = "localhost:6379";
+    options.InstanceName = "app_";
+});
+
+builder.Services.AddScoped<SpotifyApi>(sp =>
+{
+    var config = sp.GetRequiredService<IConfiguration>();
+    var cache = sp.GetRequiredService<IDistributedCache>();
+
+    var clientId = config["Spotify:ClientId"];
+    var clientSecret = config["Spotify:ClientSecret"];
+
+    return new SpotifyApi(clientId, clientSecret, cache);
+});
 
 builder.Services.AddAuthentication()
     .AddJwtBearer("AdminScheme", options =>

@@ -12,8 +12,8 @@ using SpotifyTrackView.Data;
 namespace SpotifyTrackView.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250424195714_AddSocialMediasToArtistTable")]
-    partial class AddSocialMediasToArtistTable
+    [Migration("20250511171435_AddPlaylistStatusToPlaylistsTable")]
+    partial class AddPlaylistStatusToPlaylistsTable
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -121,6 +121,9 @@ namespace SpotifyTrackView.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Artists");
                 });
@@ -244,6 +247,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Influencers");
                 });
 
@@ -293,6 +299,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Listeners");
                 });
 
@@ -329,6 +338,13 @@ namespace SpotifyTrackView.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SpotifyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("ThumbnailUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -340,7 +356,10 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasIndex("InfluencerId");
 
-                    b.ToTable("Playlist");
+                    b.HasIndex("SpotifyId")
+                        .IsUnique();
+
+                    b.ToTable("Playlists");
                 });
 
             modelBuilder.Entity("SpotifyTrackView.Entity.Region", b =>

@@ -119,6 +119,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Artists");
                 });
 
@@ -241,6 +244,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Influencers");
                 });
 
@@ -290,6 +296,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Listeners");
                 });
 
@@ -326,6 +335,13 @@ namespace SpotifyTrackView.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SpotifyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<int>("Status")
+                        .HasColumnType("int");
+
                     b.Property<string>("ThumbnailUrl")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -337,7 +353,10 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasIndex("InfluencerId");
 
-                    b.ToTable("Playlist");
+                    b.HasIndex("SpotifyId")
+                        .IsUnique();
+
+                    b.ToTable("Playlists");
                 });
 
             modelBuilder.Entity("SpotifyTrackView.Entity.Region", b =>

@@ -12,7 +12,7 @@ using SpotifyTrackView.Data;
 namespace SpotifyTrackView.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250424171230_InitialCreate")]
+    [Migration("20250509174146_InitialCreate")]
     partial class InitialCreate
     {
         /// <inheritdoc />
@@ -77,9 +77,15 @@ namespace SpotifyTrackView.Migrations
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
 
+                    b.Property<string>("FacebookUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("FirstName")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
+
+                    b.Property<string>("InstagramUrl")
+                        .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("LastName")
                         .HasMaxLength(100)
@@ -93,13 +99,31 @@ namespace SpotifyTrackView.Migrations
                     b.Property<string>("Region")
                         .HasColumnType("nvarchar(max)");
 
+                    b.Property<string>("SoundcloudUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SpotifyUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.Property<string>("ThumbnailUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("TiktokUrl")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<DateTime?>("UpdatedAt")
                         .HasColumnType("datetime2");
 
+                    b.Property<string>("WebsiteUrl")
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("YoutubeUrl")
+                        .HasColumnType("nvarchar(max)");
+
                     b.HasKey("Id");
+
+                    b.HasIndex("Email")
+                        .IsUnique();
 
                     b.ToTable("Artists");
                 });
@@ -223,6 +247,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Influencers");
                 });
 
@@ -272,6 +299,9 @@ namespace SpotifyTrackView.Migrations
 
                     b.HasKey("Id");
 
+                    b.HasIndex("Email")
+                        .IsUnique();
+
                     b.ToTable("Listeners");
                 });
 
@@ -288,6 +318,45 @@ namespace SpotifyTrackView.Migrations
                     b.HasIndex("GenreId");
 
                     b.ToTable("ListenerGenres", (string)null);
+                });
+
+            modelBuilder.Entity("SpotifyTrackView.Entity.Playlist", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<DateTime>("CreatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.Property<int>("InfluencerId")
+                        .HasColumnType("int");
+
+                    b.Property<string>("Name")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("SpotifyId")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(450)");
+
+                    b.Property<string>("ThumbnailUrl")
+                        .IsRequired()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<DateTime?>("UpdatedAt")
+                        .HasColumnType("datetime2");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("InfluencerId");
+
+                    b.HasIndex("SpotifyId")
+                        .IsUnique();
+
+                    b.ToTable("Playlists");
                 });
 
             modelBuilder.Entity("SpotifyTrackView.Entity.Region", b =>
@@ -361,6 +430,17 @@ namespace SpotifyTrackView.Migrations
                     b.Navigation("Listener");
                 });
 
+            modelBuilder.Entity("SpotifyTrackView.Entity.Playlist", b =>
+                {
+                    b.HasOne("SpotifyTrackView.Entity.Influencer", "Influencer")
+                        .WithMany("Playlists")
+                        .HasForeignKey("InfluencerId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Influencer");
+                });
+
             modelBuilder.Entity("SpotifyTrackView.Entity.Artist", b =>
                 {
                     b.Navigation("ArtistGenres");
@@ -373,6 +453,11 @@ namespace SpotifyTrackView.Migrations
                     b.Navigation("ListenerGenres");
 
                     b.Navigation("SubGenres");
+                });
+
+            modelBuilder.Entity("SpotifyTrackView.Entity.Influencer", b =>
+                {
+                    b.Navigation("Playlists");
                 });
 
             modelBuilder.Entity("SpotifyTrackView.Entity.Listener", b =>

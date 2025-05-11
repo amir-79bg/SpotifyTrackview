@@ -1,11 +1,12 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Caching.Distributed;
 using SpotifyTrackView.Data;
 using SpotifyTrackView.DataTransferObjects.Requests.Profile.Artist;
 using SpotifyTrackView.Interfaces.Services.Artist;
 
 namespace SpotifyTrackView.Services.Artist;
 
-public class ProfileService(ApplicationDbContext context): IProfileService
+public class ProfileService(ApplicationDbContext context, IDistributedCache cache): IProfileService
 {
     ApplicationDbContext _context = context;
 

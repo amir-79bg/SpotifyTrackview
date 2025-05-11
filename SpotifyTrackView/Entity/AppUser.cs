@@ -1,8 +1,10 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using Microsoft.EntityFrameworkCore;
 using SpotifyTrackView.Interfaces;
 
 namespace SpotifyTrackView.Entity;
 
+[Index(nameof(Email), IsUnique = true)]
 public class AppUser: IAppUser
 {
     public int Id { get; set; }
