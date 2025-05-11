@@ -4,7 +4,7 @@ using SpotifyTrackView.Enums;
 namespace SpotifyTrackView.Entity;
 
 
-[Index(nameof(SpotifyId), IsUnique = true)]
+[Index(nameof(SpotifyId))]
 public class Playlist
 {
     public int Id { get; set; }
