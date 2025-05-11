@@ -5,6 +5,7 @@ using SpotifyTrackView.Controllers.Api.V1.Shared;
 using SpotifyTrackView.Data;
 using SpotifyTrackView.Entity;
 using SpotifyTrackView.Enums;
+using SpotifyTrackView.Helpers;
 using SpotifyTrackView.Resources.Admin;
 
 namespace SpotifyTrackView.Controllers.Api.V1.Admin;
@@ -41,25 +42,15 @@ public class PlaylistController(ApplicationDbContext context) : BaseApiControlle
             query = query.Where(p => p.Status == status.Value);
         }
 
-        var totalCount = await query.CountAsync();
-        var totalPages = (int)Math.Ceiling(totalCount / (double)pageSize);
+        var result = await PaginationHelper.PaginateAsync(
+            query.OrderByDescending(p => p.CreatedAt)
+                .ThenByDescending(p => p.Status == PlaylistStatus.Processing),
+            p => PlaylistResource.From(p, HttpContext.Request),
+            page,
+            pageSize
+        );
 
-        var playlists = await query
-            .OrderByDescending(i => i.CreatedAt)
-            .ThenByDescending(p => p.Status == PlaylistStatus.Processing)
-            .Skip((page - 1) * pageSize)
-            .Take(pageSize)
-            .Select(p => PlaylistResource.From(p, HttpContext.Request))
-            .ToListAsync();
-
-        return Ok(new
-        {
-            Data = playlists,
-            TotalCount = totalCount,
-            CurrentPage = page,
-            PageSize = pageSize,
-            TotalPages = totalPages
-        });
+        return Ok(result);
     }
 
     [HttpPut("{playlistId}")]
@@ -72,6 +63,6 @@ public class PlaylistController(ApplicationDbContext context) : BaseApiControlle
         
         await context.SaveChangesAsync();
 
-        return Ok(playlist);
+        return Ok(PlaylistResource.From(playlist, HttpContext.Request));
     }
 }

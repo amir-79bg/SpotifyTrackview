@@ -11,7 +11,9 @@ public class PlaylistResource
         {
             playlist.Id,
             playlist.SpotifyId,
-            Influencer = InfluencerResource.From(playlist.Influencer),
+            Influencer = playlist is { Influencer: not null }
+                ? InfluencerResource.From(playlist.Influencer)
+                : null,
             StatusName = playlist.Status.GetDisplayName(),
             StatusValue = playlist.Status,
             playlist.CreatedAt,
