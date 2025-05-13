@@ -13,6 +13,7 @@ public class AuthResource
             user.FirstName,
             user.LastName,
             Token = token,
+            UserType = user.GetType().Name,
             user.Bio,
             user.Country,
             user.Region,
