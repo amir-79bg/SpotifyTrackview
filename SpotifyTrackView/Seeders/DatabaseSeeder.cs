@@ -1,6 +1,9 @@
-﻿using System.Text.Json;
+﻿using System.Security.Claims;
+using System.Text.Json;
+using Microsoft.EntityFrameworkCore;
 using SpotifyTrackView.Data;
 using SpotifyTrackView.Entity;
+using SpotifyTrackView.Interfaces;
 
 namespace SpotifyTrackView.Seeders;
 
@@ -111,6 +114,32 @@ public static class DatabaseSeeder
 
             db.Genres.AddRange(genresToAdd);
             await db.SaveChangesAsync();
+        }
+    }
+
+    public static async Task SeedAdmins(ApplicationDbContext db, IAuthService<Admin> authService)
+    {
+        if (!await db.Admins.AnyAsync())
+        {
+            var admin = new Admin();
+            admin.Email = "admin@me.com";
+            admin.Password = authService.HashPassword(admin, "123123");
+
+            db.Admins.Add(admin);
+            await db.SaveChangesAsync();
+
+            // You can generate token here if needed
+            var claims = new List<Claim>
+            {
+                new(ClaimTypes.NameIdentifier, admin.Id.ToString()),
+                new(ClaimTypes.Email, admin.Email),
+                new(ClaimTypes.Role, nameof(Admin))
+            };
+
+            var token = authService.GenerateJwtToken(admin, claims);
+
+            Console.WriteLine($"✅ Admin seeded: {admin.Email}");
+            Console.WriteLine($"🔐 Token (optional): {token}");
         }
     }
 }

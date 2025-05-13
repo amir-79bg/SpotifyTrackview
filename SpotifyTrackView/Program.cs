@@ -219,7 +219,9 @@ if (app.Environment.IsDevelopment())
 using (var scope = app.Services.CreateScope())
 {
     var db = scope.ServiceProvider.GetRequiredService<ApplicationDbContext>();
+    var adminAuth = scope.ServiceProvider.GetRequiredService<IAuthService<Admin>>();
 
+    await DatabaseSeeder.SeedAdmins(db, adminAuth);
     await DatabaseSeeder.SeedCountries(db);
     await DatabaseSeeder.SeedRegions(db);
     await DatabaseSeeder.SeedGenres(db);
