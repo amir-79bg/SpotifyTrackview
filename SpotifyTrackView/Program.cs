@@ -1,4 +1,5 @@
 using System.Text;
+using dotenv.net;
 using FluentValidation;
 using FluentValidation.AspNetCore;
 using Microsoft.AspNetCore.Identity;
@@ -20,6 +21,10 @@ using SpotifyTrackView.Services.Artist;
 using SpotifyTrackView.Validation.Rules;
 
 var builder = WebApplication.CreateBuilder(args);
+
+DotNetEnv.Env.Load();
+builder.Configuration.AddEnvironmentVariables();
+
 builder.Services.Configure<FileUploadOptions>(
     builder.Configuration.GetSection("FileUpload")
 );
